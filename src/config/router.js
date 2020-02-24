@@ -3,11 +3,18 @@ import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 
 import Home from '../screen/Home';
+import AddItem from '../screen/AddItem';
 
 const HomeNavigator = createStackNavigator(
   {
     Home: {
       screen: Home,
+      navigationOptions: {
+        headerShown: false,
+      },
+    },
+    AddItem: {
+      screen: AddItem,
       navigationOptions: {
         headerShown: false,
       },

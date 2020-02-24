@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
 import storage from './src/redux/store';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, StatusBar} from 'react-native';
 import Router from './src/config/router';
 
 const {store, persistor} = storage();
@@ -14,6 +14,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <PersistGate persistor={persistor}>
+          <StatusBar backgroundColor="blue" barStyle="light-content" />
           <View style={styles.root}>
             <Router />
           </View>
